@@ -1,0 +1,194 @@
+<html>
+	
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="js/easyinfinitescroll-expert.js"></script>
+	</head>
+	
+	<body>
+	
+	<script>
+		
+		var url = "easyinfinitescrollexpert";
+		var page= 1;
+		var params = "&name=Felps&session=first";
+		
+		var saveInitialPage = page;
+		var initialText = "";
+		
+		function updateVarsAndCleanDiv(session){
+			
+			//get content simple
+			//when click in a new Session, the Div content
+			//to be back, initial format, this function provided
+			//this, in initialText, have the text init in page load
+			//before load, the first innerHTML make a clean Div content
+			//to remove the loads scrolleds previous.
+			//the params split , have the update the term session, sended by 
+			//onclick in <a href> .
+			//loading need back to initial format a gif image.
+			
+			//get the initial text
+			initialText = document.getElementById("subcontent").innerHTML;
+			
+			//clean div loaded previously
+			document.getElementById("content").innerHTML = '';
+			
+			//update de param session to second
+			params = params.split("session=")[0] + "session="+session;
+			
+			//the div content , have now the initial text
+			$("#content").html("<div id='subcontent'>"+initialText+"</div>");
+			
+			//var global page , receive the your initial page start
+			page = saveInitialPage;
+			
+			//the image loading , back to page
+			document.getElementById("loading").innerHTML = "<img src='img/loading.gif'/>";
+		}	
+		
+	</script>
+	
+	
+		<h3> Exemplo 3 - Expert</h3>
+		<br>
+
+		<table>
+			<tr>
+				<td>
+				
+				<a href="#" onclick="updateVarsAndCleanDiv('first')">| Session First |</a>
+				
+				</td>
+				
+				<td>
+				
+				<a href="#" onclick="updateVarsAndCleanDiv('second')"> | Session Second |</a>
+				
+				</td>
+				
+				<td>
+				
+				<a href="#" onclick="updateVarsAndCleanDiv('third')"> | Session Third |</a>
+				
+				</td>
+			</tr>
+		</table>
+
+<br><br>
+		<div id="content">
+	
+			<!--page 1 -->
+			<div id='subcontent'>
+			
+				<div>
+				
+				  Neste sentido, o fenômeno da Internet agrega valor ao estabelecimento das condições
+				  financeiras e administrativas exigidas. Evidentemente, a complexidade dos estudos 
+				  efetuados faz parte de um processo de gerenciamento dos níveis de motivação departamental.
+				  A prática cotidiana prova que o início da atividade geral de formação de atitudes maximiza 
+				  as possibilidades por conta do sistema de participação geral. Por conseguinte, o aumento do
+				  diálogo entre os diferentes setores produtivos estende o alcance e a importância dos paradigmas
+				  corporativos. 
+				
+				</div> 
+				
+				<br><br><br>
+				
+				<div>
+				
+				   Pensando mais a longo prazo, a execução dos pontos do programa é uma das consequências das
+				   diretrizes de desenvolvimento para o futuro. Ainda assim, existem dúvidas a respeito de como
+				   o desenvolvimento contínuo de distintas formas de atuação estimula a padronização do levantamento
+				   das variáveis envolvidas. Nunca é demais lembrar o peso e o significado destes problemas, uma
+				   vez que a constante divulgação das informações facilita a criação das regras de conduta normativas.
+				   
+				 </div>
+				 
+				 
+				 
+				<br><br><br>
+				
+				 
+				 <div>
+				 
+				    Não obstante, a mobilidade dos capitais internacionais obstaculiza a apreciação da importância 
+					do processo de comunicação como um todo. Acima de tudo, é fundamental ressaltar que a consulta
+					aos diversos militantes oferece uma interessante oportunidade para verificação dos índices
+					pretendidos. O incentivo ao avanço tecnológico, assim como a necessidade de renovação processual
+					cumpre um papel essencial na formulação das posturas dos órgãos dirigentes com relação às suas
+					atribuições. O que temos que ter sempre em mente é que a crescente influência da mídia apresenta
+					tendências no sentido de aprovar a manutenção das formas de ação.    Não obstante, a mobilidade 
+					dos capitais internacionais obstaculiza a apreciação da importância do processo de comunicação 
+					como um todo. Acima de tudo, é fundamental ressaltar que a consulta aos diversos militantes 
+					oferece uma interessante oportunidade para verificação dos índices pretendidos. O incentivo 
+					ao avanço tecnológico, assim como a necessidade de renovação processual cumpre um papel
+					essencial na formulação das posturas dos órgãos dirigentes com relação às suas atribuições.
+					O que temos que ter sempre em mente é que a crescente influência da mídia apresenta tendências
+					no sentido de aprovar a manutenção das formas de ação. 
+					
+				</div>
+				
+				
+				
+				<br><br><br>
+				
+				
+				
+				<div>
+				
+				    Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a consolidação das
+					estruturas possibilita uma melhor visão global das novas proposições. Percebemos, cada
+					vez mais, que o entendimento das metas propostas afeta positivamente a correta previsão 
+					dos modos de operação convencionais. O empenho em analisar a hegemonia do ambiente
+					político talvez venha a ressaltar a relatividade das direções preferenciais no sentido do progresso. 
+					
+				</div>
+				
+				
+				<br><br><br>
+				
+				
+				
+				<div>
+				
+				  É claro que a revolução dos costumes estimula a padronização do processo de comunicação como um todo.
+				  Assim mesmo, a mobilidade dos capitais internacionais deve passar por modificações independentemente 
+				  dos paradigmas corporativos. Do mesmo modo, a determinação clara de objetivos oferece uma interessante
+				  oportunidade para verificação do remanejamento dos quadros funcionais. Pensando mais a longo prazo, 
+				  a constante divulgação das informações afeta positivamente a correta previsão das novas proposições. 
+				  
+				 </div>
+			</div>	
+	
+			
+			<br><br><br>
+			
+		</div>
+	
+		<div id='loading' align="center">
+			<img src="img/loading.gif"/>
+		</div>
+	
+	<script>
+	
+		$(window).scroll(function()
+				{
+				console.debug("page Scrool Active");
+				
+				//when scroll end the page call function
+				//pageLoad();
+				
+				//if your content load fastly you can set timeout in call function to descrease load time or increase..
+				setTimeout('pageLoad();',1000);
+				
+			});
+	
+	
+	</script>
+	
+	
+	</body>
+
+
+</html>
