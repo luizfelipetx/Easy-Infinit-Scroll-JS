@@ -1,7 +1,6 @@
 Easy-Infinit-Scroll-JS
 ======================
-Easy Infinite Scroll Js
-==================
+
 
 Easy Infinite Scroll Js
 
